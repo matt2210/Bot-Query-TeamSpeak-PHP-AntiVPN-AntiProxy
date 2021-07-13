@@ -1,13 +1,13 @@
 <?php
 require("ts3admin.class.php");
-$ignore_groups = 1;
-$msg_kick = "un proxy a été détecté"; 
-$login_query = "serveradmin"; 
-$pass_query = "password"; 
-$adres_ip = "127.0.0.1";
-$query_port = "10011"; 
-$port_ts = "9987"; 
-$nom_bot = "Robot-Anti-VPN"; 
+$ignore_groups = 1; // ID FOR IGNORE GROUPS
+$msg_kick = "un proxy a été détecté"; // NAME OF KICK
+$login_query = "serveradmin"; //USERNAME QUERY
+$pass_query = "pass";  // PASS OF QUERY USER
+$adres_ip = "IP"; // IP OR DOMAIN
+$query_port = "10101"; // PORT QUERY
+$port_ts = "9987";  // PORT VOICE SERV
+$nom_bot = "Robot-Anti-VPN"; //NAME
 $ts = new ts3Admin($adres_ip, $query_port);
 if(!$ts->getElement('success', $ts->connect()))  {
       die("Anti-Proxy");
@@ -25,9 +25,8 @@ $groups = explode(",", $val['client_servergroups'] );
 if(in_array($ignore_groups, $groups) || ($val['client_type'] == 1)) {
 continue;
 }
-$file = file_get_contents('https://ipinfo.io/'.$val['connection_client_ip'].'/TOKEN');
-$file = json_decode($file, true);
-if($file['message'] == "Proxy detected.") {
+$file = file_get_contents('https://blackbox.ipinfo.app/lookup/'.$val['connection_client_ip'].'');
+if($file == "Y"){
 $ts->clientKick($val['clid'], "server", $msg_kick);
 }
 }
