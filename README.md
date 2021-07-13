@@ -1,8 +1,6 @@
 # 🛑📁 Bot Query TeamSpeak PHP AntiVPN & AntiProxy.
 Bot script Query TeamSpeak solution filtrage connection client Anti-VPN, Anti-Proxy on connected TeamSpeak server by serveradmin using BASH & PHP🖥️
 
-[![Alt text](http://www.amcar.ma/ressources/img/misc/Demo-Video.png)](https://www.youtube.com/watch?v=wisfHRa2mAk)
-
 ## 📃 *__Exigence__* :
 * Un serveur TeamSpeak Login Query.
 * Un serveur sous GNU/Linux Exemple : Debian/Unbutu.
@@ -10,10 +8,8 @@ Bot script Query TeamSpeak solution filtrage connection client Anti-VPN, Anti-Pr
 
 ## 📊 *__Installation__* :
 
-* Installation du Package "unzip" -> `sudo apt-get install unzip`
-* Téléchargement du script -> `wget https://github.com/BadySmith/Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy/archive/master.zip`
-* Décompréssion du dossier -> `unzip Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy-master.zip`
-* On suprime le zip -> `rm Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy-master.zip`
+* Installation du Package "git" -> `sudo apt-get install git`
+* Téléchargement du repo git -> `git clone https://github.com/matt2210/Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy`
 * Mv -> `mv Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy-master TSAnti-Proxy`
 * Direction le dossier de configueration -> `cd TSAnti-Proxy`
 * Autorisation de l'exécuté -> `chmod 777 *`
