@@ -10,7 +10,7 @@ Bot script Query TeamSpeak solution filtrage connection client Anti-VPN, Anti-Pr
 
 * Installation du Package "git" -> `sudo apt-get install git`
 * Téléchargement du repo git -> `git clone https://github.com/matt2210/Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy`
-* Mv -> `mv Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy-master TSAnti-Proxy`
+* Mv -> `mv Bot-Query-TeamSpeak-PHP-AntiVPN-AntiProxy TSAnti-Proxy`
 * Direction le dossier de configueration -> `cd TSAnti-Proxy`
 * Autorisation de l'exécuté -> `chmod 777 *`
 * Config du bot -> `vim bot.php` ou `nano bot.php`
