@@ -25,7 +25,7 @@ $groups = explode(",", $val['client_servergroups'] );
 if(in_array($ignore_groups, $groups) || ($val['client_type'] == 1)) {
 continue;
 }
-$file = file_get_contents('https://api.xdefcon.com/proxy/check/?ip='.$val['connection_client_ip'].'');
+$file = file_get_contents('https://ipinfo.io/'.$val['connection_client_ip'].'/TOKEN');
 $file = json_decode($file, true);
 if($file['message'] == "Proxy detected.") {
 $ts->clientKick($val['clid'], "server", $msg_kick);
